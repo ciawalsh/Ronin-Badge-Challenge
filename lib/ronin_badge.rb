@@ -16,9 +16,17 @@ class Ronin_Badge < Sinatra::Base
   	erb :new_game
   end
 
-  # get '/calculate' do
-  # 	@rock = params[:rock_button]
-  # end
+  get '/calculate' do
+  	@choice = params[:rock] || params[:paper] || params[:scissors]
+		@win = ["rock", "paper", "scissors"].sample
+
+  	if @win == "rock"
+  		redirect "/win"
+  	else
+  		redirect "/lose"
+  	end
+
+  end
 
   get '/win' do
   	erb :win
