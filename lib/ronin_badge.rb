@@ -3,7 +3,7 @@ require 'sinatra/base'
 class Ronin_Badge < Sinatra::Base
   
   get '/' do
-    'Hello Charlie!'
+    html :index
   end
 
   # start the server if ruby file executed directly
