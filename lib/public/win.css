@@ -1,0 +1,64 @@
+html, body {
+  text-align: center;
+  color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+	background: url(../images/winning.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-top: 5em;
+}
+
+/*=======================
+	    WINNING PAGE
+=======================*/	
+
+#again {
+	text-decoration: none;
+	color: #ff0000;
+}
+
+#box {
+	border-radius: 20px;
+	border: 2px solid #ff0000;
+	background-color: #000000;
+	height: 50px;
+	width: 125px;
+	margin: auto;
+	text-align: center;
+}
+
+#box:hover {
+  background-color:rgba(255, 255, 255, 0.5);
+  opacity: 1;
+}
+
+/*=======================
+	    EVERY FOOTER
+=======================*/
+
+footer {
+	font-family: Cursive;
+	margin: 0;
+	padding: 0;
+	height: auto;
+	width: auto;
+    position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+#logo {
+	margin: 0;
+	padding: 0;
+	bottom: 0;
+}
+
+#note {
+	margin: 0;
+}
