@@ -27,7 +27,7 @@ body {
 #box {
 	border-radius: 20px;
 	border: 2px solid #ff0000;
-	background-color: #000000;
+	background-color: rgba(0,  0,  0, 0.53);
 	height: 50px;
 	width: 125px;
 	margin: auto;
@@ -35,7 +35,7 @@ body {
 }
 
 #box:hover {
-  background-color:rgba(255, 255, 255, 0.5);
+  background-color:rgba(51, 44, 44, 1);
   opacity: 1;
 }
 
