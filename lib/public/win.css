@@ -18,9 +18,14 @@ body {
 	    WINNING PAGE
 =======================*/	
 
+body p {
+	color: red;
+}
+
 #again {
 	text-decoration: none;
 	color: #ff0000;
+	height: auto;
 }
 
 #box {

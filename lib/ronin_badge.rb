@@ -1,9 +1,11 @@
 require 'sinatra/base'
 
 class Ronin_Badge < Sinatra::Base
-  
+
+  enable :sessions
+
   get '/' do
-    erb :index
+      erb :index
   end
 
   post '/' do
@@ -18,44 +20,41 @@ class Ronin_Badge < Sinatra::Base
 
   get '/calculate' do
   	@choice = params[:rock] || params[:paper] || params[:scissors]
-		@win = ["rock", "paper", "scissors"].sample
+    session[:computer] = ["rock", "paper", "scissors"].sample
 
-  	# if @win == "rock"
-  	# 	redirect "/win"
-  	# else
-  	# 	redirect "/lose"
-  	# end
-
-  	if @choice == params[:rock] && @win == "scissors"
+  	if @choice == params[:rock] && session[:computer] == "scissors"
   		redirect '/win'
-  	elsif @choice == params[:rock] && @win == "paper"
+  	elsif @choice == params[:rock] && session[:computer] == "paper"
   		redirect '/lose'
-  	elsif @choice == params[:rock] && @win == "rock"
+  	elsif @choice == params[:rock] && session[:computer] == "rock"
   		redirect '/draw'
-  	elsif @choice == params[:paper] && @win == "scissors"
+  	elsif @choice == params[:paper] && session[:computer] == "scissors"
   		redirect '/lose'
-  	elsif @choice == params[:paper] && @win == "paper"
+  	elsif @choice == params[:paper] && session[:computer] == "paper"
   		redirect '/draw'
-  	elsif @choice == params[:paper] && @win == "rock"
+  	elsif @choice == params[:paper] && session[:computer] == "rock"
   		redirect '/win'		
-  	elsif @choice == params[:scissors] && @win == "scissors"
+  	elsif @choice == params[:scissors] && session[:computer] == "scissors"
   		redirect '/draw'	
-  	elsif @choice == params[:scissors] && @win == "paper"
+  	elsif @choice == params[:scissors] && session[:computer] == "paper"
   		redirect '/win'	
-  	elsif @choice == params[:scissors] && @win == "rock"
+  	elsif @choice == params[:scissors] && session[:computer] == "rock"
   		redirect '/lose'
   	end
   end
 
   get '/win' do
+    @computer = session[:computer]
   	erb :win
   end
 
   get '/lose' do
+    @computer = session[:computer]
   	erb :lose
   end
 
   get '/draw' do
+    @computer = session[:computer]
   	erb :draw
   end
 
