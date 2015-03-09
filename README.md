@@ -1,6 +1,8 @@
 Rōnin Badge Challenge
 ==================
 
+### Makers Academy Week 3 Friday Solo Challenge
+
 Task
 -----
 
@@ -20,5 +22,12 @@ Task
 
   * A winner will be declared.
 
+## Technologies Used
 
-An updated README will follow during the following weeks as the program is updated.
+- Ruby
+- Ruby Gems
+- Sinatra
+- Rspec
+- Cucumber
+- HTML
+- CSS
